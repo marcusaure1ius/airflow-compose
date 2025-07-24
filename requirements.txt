@@ -1,0 +1,4 @@
+pandas
+scikit-learn
+apache-airflow-providers-telegram
+psycopg2-binary

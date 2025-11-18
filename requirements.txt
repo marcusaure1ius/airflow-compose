@@ -2,3 +2,8 @@ pandas
 scikit-learn
 apache-airflow-providers-telegram
 psycopg2-binary
+apache-airflow-providers-sftp
+apache-airflow-providers-oracle
+apache-airflow-providers-postgres
+SQLAlchemy
+numpy

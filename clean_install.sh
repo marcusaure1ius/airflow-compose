@@ -13,8 +13,8 @@ rm .env
 touch .env
 
 cat << EOF > .env
-FERNET_KEY=$(openssl rand -base64 32)
-SECRET_KEY=$(openssl rand -hex 16)
+AIRFLOW__CORE__FERNET_KEY=$(openssl rand -base64 32)
+AIRFLOW__WEBSERVER__SECRET_KEY=$(openssl rand -hex 16)
 AIRFLOW_UID=$(id -u)
 AIRFLOW_GID=0
 _AIRFLOW_WWW_USER_USERNAME=airflow

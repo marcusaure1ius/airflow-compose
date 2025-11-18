@@ -18,7 +18,7 @@
 1. Клонируйте репозиторий и перейдите в папку с проектом
 
 ```bash
-git clone https://github.com/marcusaure1ius/airflow-compose.git
+git clone https://github.com/marcusaure1ius/airflow-compose.git && cd airflow-compose
 ```
 
 2. Для создания БД для метаданных airflow выполните следующие пункты
@@ -53,6 +53,10 @@ git clone https://github.com/marcusaure1ius/airflow-compose.git
 
 ```bash
 chmod +x clean_install.sh
+```
+
+```bash
+sudo ./clean_install.sh
 ```
 
 > [!IMPORTANT]

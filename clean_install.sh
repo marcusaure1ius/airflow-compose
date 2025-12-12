@@ -1,5 +1,17 @@
 #!/usr/bin/env bash
 
+# Определяем, что доступно: docker compose или docker-compose
+if docker compose version >/dev/null 2>&1; then
+    DC="docker compose"
+elif docker-compose version >/dev/null 2>&1; then
+    DC="docker-compose"
+else
+    echo "Ошибка: docker compose не найден в системе"
+    exit 1
+fi
+
+echo "Используем команду: $DC"
+
 echo "1. Cleaning up old directories..."
 rm -rf ./dags ./logs ./plugins
 
@@ -24,4 +36,4 @@ EOF
 # 4. Стартуем контейнеры
 echo "Starting containers..."
 
-docker compose down --volumes --remove-orphans && docker compose up --build -d
+$DC down --volumes --remove-orphans && $DC up --build -d
